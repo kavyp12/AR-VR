@@ -84,19 +84,19 @@ const Features = () => {
     {
       num: "01",
       subtitle: "Clear Understanding",
-      title: "Buyers see everything. No imagination needed.",
+      title: "Buyers see every apartment in full 3D. No imagination needed.",
       image: "/3D img1_logo.png",
     },
     {
       num: "02",
       subtitle: "Clear Confidence",
-      title: "Every space, amenity and view is fully explorable.",
+      title: "Every unit, amenity and view is fully explorable in real time.",
       image: "/3D image2_logo_r.png",
     },
     {
       num: "03",
       subtitle: "Clear Decisions",
-      title: "When buyers understand the project, they decide faster.",
+      title: "When buyers understand the project, they book faster.",
       image: "/3D image3_logo.png",
     },
   ];
@@ -104,38 +104,38 @@ const Features = () => {
   const horizontalSlides = [
     {
       num: "01",
-      title: "Full Exterior View",
-      desc: "See the complete building from every angle — facade, rooftop, landscaping.",
+      title: "Full Exterior 3D View",
+      desc: "See the complete tower from every angle — facade, podium, rooftop and landscaping.",
       image: "/3D image4_logo.png",
     },
     {
       num: "02",
-      title: "Nearby Connectivity",
-      desc: "Metro, roads, malls, schools — all mapped and measured for instant clarity.",
+      title: "Interactive Location Map",
+      desc: "Metro, roads, malls and schools — all mapped, measured and explorable in 3D.",
       image: "/3D image5_logo.png",
     },
     {
       num: "03",
-      title: "Day & Night Mode",
-      desc: "Realistic lighting at sunrise, noon and dusk. Buyers fall in love twice.",
+      title: "Day & Night Lighting",
+      desc: "Photorealistic lighting at sunrise, noon and dusk. Buyers fall in love twice.",
       image: "/3D image6_logo.png",
     },
     {
       num: "04",
-      title: "Unit-Level Walk-through",
-      desc: "Step into any unit on any floor. Open doors. Measure rooms. Feel the space.",
+      title: "Apartment Walkthrough",
+      desc: "Step into any unit on any floor. Walk room to room. Measure spaces. Feel the layout.",
       image: "/3D img1_logo.png",
     },
     {
       num: "05",
-      title: "Amenity Showcase",
-      desc: "Pool, gym, sky-lounge — all fully explorable. No guesswork, only experience.",
+      title: "3D Amenity Showcase",
+      desc: "Pool, gym, clubhouse, sky-lounge — every amenity fully explorable in interactive 3D.",
       image: "/3D image2_logo_r.png",
     },
     {
       num: "06",
-      title: "Live Sales Dashboard",
-      desc: "Availability, pricing and floor plans updated instantly. One source of truth.",
+      title: "Live Inventory Dashboard",
+      desc: "Unit availability, pricing and floor plans synced live. One source of truth for sales teams.",
       image: "/3D image3_logo.png",
     },
   ];
@@ -543,9 +543,9 @@ const Features = () => {
 
             {/* Header */}
             <div className="ft-cards-header">
-              <span className="ft-section-tag">Features — 01</span>
+              <span className="ft-section-tag">3D Sales Tools — 01</span>
               <h2 className="ft-cards-h2">
-                Clear Sales.<br />Clear Commitments.
+                Clear 3D Visuals.<br />Faster Bookings.
               </h2>
             </div>
 
@@ -600,9 +600,9 @@ const Features = () => {
 
             {/* Top bar */}
             <div className="ft-h-topbar">
-              <span className="ft-h-label">Features — 02</span>
+              <span className="ft-h-label">Interactive Walkthrough — 02</span>
               <h2 className="ft-h-headline">
-                See how buyers<br />explore your project
+                See how buyers<br />explore your project in 3D
               </h2>
             </div>
 
