@@ -491,11 +491,11 @@ const Developers = () => {
           <div className="dv-header">
             <p className="dv-eyebrow">
               <span className="dv-eyebrow-star">✦</span>
-              Why people trust us
+              Why real estate developers trust us
             </p>
             <h2 className="dv-h2">
               <span className="dv-h2-sans">Real </span>
-              <span className="dv-h2-serif">Results</span>
+              <span className="dv-h2-serif">3D Results</span>
               <br />
               <span className="dv-h2-sans">for developers</span>
             </h2>
@@ -506,8 +506,8 @@ const Developers = () => {
 
             {/* A — 30% Faster decisions */}
             <div className="dv-card dv-card-a">
-              <p className="dv-stat-label">30% faster decisions</p>
-              <p className="dv-stat-desc">Buyers understand the project instantly.</p>
+              <p className="dv-stat-label">30% faster booking decisions</p>
+              <p className="dv-stat-desc">Buyers understand the full apartment instantly in 3D.</p>
               <div className="dv-card-a-art">
                 <span className="dv-art-num">30%</span>
                 <div className="dv-art-line" />
@@ -516,8 +516,8 @@ const Developers = () => {
 
             {/* B — 40% fewer objections */}
             <div className="dv-card dv-card-b">
-              <p className="dv-stat-label">40% fewer objections</p>
-              <p className="dv-stat-desc">Clear views reduce questions.</p>
+              <p className="dv-stat-label">40% fewer buyer objections</p>
+              <p className="dv-stat-desc">Clear 3D views eliminate guesswork on layouts.</p>
               <div className="dv-card-b-art">
                 <div className="dv-eye-wrap">
                   {/* Proper eye icon — fully visible on light bg */}
@@ -549,7 +549,7 @@ const Developers = () => {
                     <line x1="48" y1="10" x2="49" y2="5" stroke="#111" strokeWidth="1.5" strokeLinecap="round"/>
                     <line x1="58" y1="14" x2="60" y2="9" stroke="#111" strokeWidth="1.5" strokeLinecap="round"/>
                   </svg>
-                  <span className="dv-eye-label">Clear visibility</span>
+                  <span className="dv-eye-label">Clear 3D Visibility</span>
                 </div>
               </div>
             </div>
@@ -560,13 +560,13 @@ const Developers = () => {
                 <div className="dv-stars">
                   {[...Array(5)].map((_, i) => <div key={i} className="dv-star" />)}
                 </div>
-                <p className="dv-card-c-title">Better Team Performance</p>
-                <p className="dv-card-c-desc">Your sales team presents with one powerful tool.</p>
+                <p className="dv-card-c-title">Empowered Sales Teams</p>
+                <p className="dv-card-c-desc">Your sales executives and channel partners present every project with one interactive 3D tool.</p>
               </div>
               <div className="dv-avatars">
                 <div className="dv-avatar-row">
                   <div className="dv-avatar dv-avatar-a">AK</div>
-                  <span className="dv-avatar-label">Sales Lead</span>
+                  <span className="dv-avatar-label">Sales Head</span>
                 </div>
                 <div className="dv-avatar-row" style={{ paddingLeft: "1.25rem" }}>
                   <div className="dv-avatar dv-avatar-b">SR</div>
@@ -583,18 +583,18 @@ const Developers = () => {
             <div className="dv-card dv-card-f">
               <div>
                 <p className="dv-card-f-title">Higher booking confidence</p>
-                <p className="dv-card-f-desc">Buyers trust what they can see clearly.</p>
+                <p className="dv-card-f-desc">Buyers trust the apartments they can explore in 3D.</p>
               </div>
               <div className="dv-chat">
                 <div className="dv-bubble-row">
                   <div className="dv-bubble-avatar">B</div>
-                  <div className="dv-bubble dv-bubble-dark">Hey there!</div>
+                  <div className="dv-bubble dv-bubble-dark">Hi there!</div>
                 </div>
                 <div className="dv-bubble-row" style={{ paddingLeft: "33px" }}>
                   <div className="dv-bubble dv-bubble-dark">Which floor has the best view?</div>
                 </div>
                 <div className="dv-bubble-row right">
-                  <div className="dv-bubble dv-bubble-light">Floor 22 — I can show you now ↗</div>
+                  <div className="dv-bubble dv-bubble-light">Floor 22 — let me show you in 3D ↗</div>
                 </div>
               </div>
             </div>
@@ -609,7 +609,7 @@ const Developers = () => {
               <div className="dv-card-d-overlay">
                 <p className="dv-card-d-text">
                   Reliable &amp;<br />
-                  <em>Future-ready</em>
+                  <em>Future-ready 3D</em>
                 </p>
               </div>
             </div>
@@ -617,9 +617,9 @@ const Developers = () => {
             {/* E — Perfect for launches (black) */}
             <div className="dv-card dv-card-e">
               <div>
-                <p className="dv-card-e-title">Perfect for launches</p>
+                <p className="dv-card-e-title">Perfect for project launches</p>
                 <ul className="dv-launch-list">
-                  {["Events", "Meetings", "International Showcases", "Sales Expos", "NRI Investor Meets"].map((item) => (
+                  {["Pre-Launch Events", "Channel Partner Meets", "International Roadshows", "Sales Expos", "NRI Investor Meets"].map((item) => (
                     <li key={item} className="dv-launch-item">
                       <span className="dv-launch-plus">✦</span>
                       {item}
