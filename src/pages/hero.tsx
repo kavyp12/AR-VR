@@ -4,9 +4,9 @@ const Hero = () => {
   const projectTypes = [
     "Residential Towers",
     "Luxury Apartments",
-    "Townships",
-    "Commercial Spaces",
-    "Sales Galleries",
+    "Villas & Townships",
+    "Commercial Projects",
+    "Virtual Sales Galleries",
     "International Launches",
   ];
 
@@ -304,21 +304,21 @@ const Hero = () => {
         <div className="hero-vignette" />
 
         {/* Vertical side label */}
-        <div className="hero-side-label">Interactive 3D Property Platform</div>
+        <div className="hero-side-label">Interactive 3D Real Estate Visualization Platform</div>
 
         {/* Top stats bar */}
         <div className="hero-topbar">
           <div className="hero-topbar-stat">
             <span className="hero-stat-num" ref={counterRef}>0</span>
-            <span className="hero-stat-label">Projects Delivered</span>
+            <span className="hero-stat-label">3D Projects Delivered</span>
           </div>
           <div className="hero-topbar-stat">
             <span className="hero-stat-num">6×</span>
-            <span className="hero-stat-label">Faster Closings</span>
+            <span className="hero-stat-label">Faster Pre-Sales</span>
           </div>
           <div className="hero-topbar-stat">
             <span className="hero-stat-num">100%</span>
-            <span className="hero-stat-label">Pre-launch Sales</span>
+            <span className="hero-stat-label">Pre-Launch Ready</span>
           </div>
         </div>
 
@@ -335,8 +335,9 @@ const Hero = () => {
             {/* Left: desc + scroll */}
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               <p className="hero-desc">
-                Virtual Grid creates a fully interactive 3D digital twin of your
-                project — buyers explore every corner before construction begins.
+                Virtual Grid builds interactive 3D digital twins and virtual
+                walkthroughs of your real estate project — buyers tour every
+                apartment, amenity and view before construction begins.
               </p>
               <div className="hero-scroll-hint">
                 <div className="hero-scroll-tick" />
