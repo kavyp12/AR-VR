@@ -4,6 +4,7 @@ import Hero from './pages/hero';
 import Features from './pages/feature';
 import Developers from './pages/devlopers';
 import Concept from './pages/concept';
+import FAQ from './pages/faq';
 import Footer from './pages/footer';
 
 
@@ -23,6 +24,8 @@ const VirtualGridLanding = () => {
       <Developers />
 
       <Concept />
+
+      <FAQ />
 
       <Footer />
       
