@@ -11,6 +11,8 @@ const Contact = () => {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const projectTypes = [
     "Residential Tower",
@@ -27,9 +29,26 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError(null);
+    setSending(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || "Failed to send. Please try again.");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -458,6 +477,40 @@ const Contact = () => {
           background: #fff;
           color: #000;
         }
+        .cn-submit:disabled {
+          opacity: 0.55;
+          cursor: not-allowed;
+          background: #000;
+          color: #fff;
+        }
+        .cn-submit:disabled:hover { background: #000; color: #fff; }
+
+        .cn-error {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 0.85rem 1rem;
+          border: 1.5px solid #000;
+          background: #fff;
+          margin-top: -0.5rem;
+        }
+        .cn-error-tag {
+          font-family: 'Space Mono', monospace;
+          font-size: 9px;
+          letter-spacing: 0.28em;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #fff;
+          background: #000;
+          padding: 4px 8px;
+          flex-shrink: 0;
+        }
+        .cn-error-msg {
+          font-family: 'Space Grotesk', sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          color: #000;
+        }
 
         .cn-submit-arrow {
           width: 16px;
@@ -695,12 +748,24 @@ const Contact = () => {
                 />
               </div>
 
+              {error && (
+                <div className="cn-error" role="alert">
+                  <span className="cn-error-tag">Error</span>
+                  <span className="cn-error-msg">{error}</span>
+                </div>
+              )}
+
               <div className="cn-actions">
                 <p className="cn-disclaimer">
                   Response within<br />48 hours · No spam
                 </p>
-                <button type="submit" className="cn-submit">
-                  Send Brief
+                <button
+                  type="submit"
+                  className="cn-submit"
+                  disabled={sending}
+                  aria-busy={sending}
+                >
+                  {sending ? "Sending…" : "Send Brief"}
                   <span className="cn-submit-arrow" />
                 </button>
               </div>
