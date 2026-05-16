@@ -314,8 +314,8 @@ const Footer = () => {
 
             {/* LEFT */}
             <div>
-              <p className="ft-section-label">✦ Stay connected</p>
-              <h3 className="ft-connect-title">For project enquiries email:</h3>
+              <p className="ft-section-label">✦ Start your 3D project</p>
+              <h3 className="ft-connect-title">For real estate 3D project enquiries:</h3>
               <p className="ft-connect-email">contact@virtualgrid.com</p>
 
               <a href="mailto:contact@virtualgrid.com" className="ft-btn">
