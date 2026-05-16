@@ -1,13 +1,35 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLenis } from "lenis/react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const lenis = useLenis();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // White-themed pages need the solid dark navbar at the top too,
+  // otherwise the white-on-transparent links disappear.
+  const forceSolid = location.pathname === "/contact";
+  const dark = scrolled || forceSolid;
+  const isAbout = location.pathname === "/about";
+  const isContact = location.pathname === "/contact";
+
+  const goToAnchor = (e: React.MouseEvent, hash: string) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      lenis?.scrollTo(hash, { offset: -60 });
+    } else {
+      navigate(`/${hash}`);
+    }
+  };
 
   return (
     <>
@@ -18,9 +40,9 @@ const Navbar = () => {
           position: fixed;
           top: 0; left: 0; right: 0;
           z-index: 200;
-          background: ${scrolled ? "rgba(0,0,0,0.97)" : "transparent"};
-          border-bottom: 1px solid ${scrolled ? "rgba(255,255,255,0.07)" : "transparent"};
-          backdrop-filter: ${scrolled ? "blur(20px)" : "none"};
+          background: ${dark ? "rgba(0,0,0,0.97)" : "transparent"};
+          border-bottom: 1px solid ${dark ? "rgba(255,255,255,0.07)" : "transparent"};
+          backdrop-filter: ${dark ? "blur(20px)" : "none"};
           transition: background 0.45s, border-color 0.45s;
         }
 
@@ -77,6 +99,9 @@ const Navbar = () => {
           gap: 3rem;
         }
         .nb-link {
+          background: none;
+          border: none;
+          cursor: pointer;
           font-family: 'Space Mono', monospace;
           font-size: 10px;
           letter-spacing: 0.18em;
@@ -98,6 +123,8 @@ const Navbar = () => {
         }
         .nb-link:hover { color: #fff; }
         .nb-link:hover::after { width: 100%; }
+        .nb-link-active { color: #fff; }
+        .nb-link-active::after { width: 100%; }
 
         /* CTA */
         .nb-cta {
@@ -114,6 +141,9 @@ const Navbar = () => {
           transition: background 0.25s, color 0.25s;
           border-radius: 0;
           outline: none;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
         }
         .nb-cta:hover { background: #d4d4d4; }
 
@@ -133,19 +163,35 @@ const Navbar = () => {
 
       <nav className="nb">
         <div className="nb-inner">
-          <a className="nb-logo">
+          <Link to="/" className="nb-logo">
             <div className="nb-logo-mark">
               <div className="nb-logo-mark-inner" />
             </div>
             <span className="nb-logo-text">Virtual Grid</span>
-          </a>
+          </Link>
 
           <div className="nb-links">
-            <a href="#about" className="nb-link">About</a>
-            <a href="#projects" className="nb-link">Projects</a>
-            <a href="#contact" className="nb-link">Contact</a>
+            <Link
+              to="/about"
+              className={`nb-link${isAbout ? " nb-link-active" : ""}`}
+            >
+              About
+            </Link>
+            <a
+              href="#projects"
+              className="nb-link"
+              onClick={(e) => goToAnchor(e, "#projects")}
+            >
+              Projects
+            </a>
+            <Link
+              to="/contact"
+              className={`nb-link${isContact ? " nb-link-active" : ""}`}
+            >
+              Contact
+            </Link>
             <div className="nb-sep" />
-            <button className="nb-cta">Book Demo</button>
+            <Link to="/contact" className="nb-cta">Book Demo</Link>
           </div>
         </div>
       </nav>

@@ -314,11 +314,8 @@ const Footer = () => {
 
             {/* LEFT */}
             <div>
-              <p className="ft-section-label">✦ Start your 3D project</p>
-              <h3 className="ft-connect-title">For real estate 3D project enquiries:</h3>
-              <p className="ft-connect-email">contact@virtualgrid.com</p>
 
-              <a href="mailto:contact@virtualgrid.com" className="ft-btn">
+              <a href="mailto:contact@enhc.tech" className="ft-btn">
                 Email Us
                 <span className="ft-btn-circle">
                   <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
@@ -352,16 +349,14 @@ const Footer = () => {
             {/* RIGHT */}
             <div className="ft-offices">
               <div>
-                <p className="ft-office-tag">Offline</p>
-                <p className="ft-office-name">UAE Office</p>
+                <p className="ft-office-tag">Headquarters</p>
+                <p className="ft-office-name">US Headquarters</p>
                 <p className="ft-office-addr">
-                  Compass Building, Al Shohada Road<br />
-                  Al Hamra Industrial Zone-FZ,<br />
-                  Ras Al Khaimah, United Arab Emirates
+                  New Jersey,<br />
+                  United States
                 </p>
-                <p className="ft-office-phone">Phone: +971 58 946 8963</p>
-                <a href="tel:+971589468963" className="ft-btn">
-                  Call UAE Office
+                <a href="mailto:contact@enhc.tech" className="ft-btn">
+                  Email US Office
                   <span className="ft-btn-circle">
                     <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
                       <path d="M2 6h8M6 2l4 4-4 4" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
@@ -374,12 +369,11 @@ const Footer = () => {
                 <p className="ft-office-tag">Offline</p>
                 <p className="ft-office-name">India Office</p>
                 <p className="ft-office-addr">
-                  A-06, Krish Residency-2,<br />
-                  near Deepak School, Ankur Chokadi,<br />
-                  Nikol, Ahmedabad, Gujarat 380049
+                  Ahmedabad,<br />
+                  Gujarat, India
                 </p>
-                <p className="ft-office-phone">Phone: +91 91068 24049</p>
-                <a href="tel:+919106824049" className="ft-btn">
+                <p className="ft-office-phone">Phone: +91 93131 53036</p>
+                <a href="tel:+919313153036" className="ft-btn">
                   Call India Office
                   <span className="ft-btn-circle">
                     <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
