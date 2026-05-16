@@ -7,22 +7,22 @@ const Concept = () => {
   const steps = [
     {
       number: "01",
-      title: "Share your drawings",
-      subtitle: "Plans, elevations and details.",
+      title: "Share your architectural drawings",
+      subtitle: "Floor plans, elevations, masterplan and BIM data.",
       image: "/floor plan 1.png",
       icons: ["✦", "✦", "✦"],
     },
     {
       number: "02",
-      title: "We build your 3D model",
-      subtitle: "High-fidelity digital twin of your project.",
+      title: "We build your interactive 3D model",
+      subtitle: "Photorealistic digital twin of your real estate project.",
       image: "/floorpplan 2.png",
       icons: ["✦", "✦", "✦"],
     },
     {
       number: "03",
-      title: "Go live & start selling",
-      subtitle: "Buyers explore before you build.",
+      title: "Launch your virtual sales gallery",
+      subtitle: "Buyers explore the project online before you build.",
       image: "/floor plan 3.png",
       icons: ["✦", "✦", "✦"],
     },
@@ -238,7 +238,7 @@ const Concept = () => {
           <div className="cp-sticky-head">
             <p className="cp-eyebrow">
               <span className="cp-eyebrow-star">✦</span>
-              From concept to launch
+              From drawings to launch in weeks
             </p>
             <div className="cp-headings">
               <h2 className="cp-h-left">
